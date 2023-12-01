@@ -1,7 +1,31 @@
 ---
+import Image from '~/components/common/Image.astro';
 import { SITE } from '~/utils/config';
 ---
-
+<Image
+src="~/assets/images/TB.png"
+class="block dark:hidden"
+widths={[50, 100]}
+width={100}
+sizes="(max-width: 100px) 50px, 100px"
+alt="TraxBee Logo"
+aspectRatio="16:9"
+layout="cover"
+loading="lazy"
+decoding="async"
+/>
+<Image
+src="~/assets/images/TB-dark.png"
+class="hidden dark:block"
+widths={[50, 100]}
+width={100}
+sizes="(max-width: 100px) 50px, 100px"
+alt="TraxBee Logo"
+aspectRatio="16:9"
+layout="cover"
+loading="lazy"
+decoding="async"
+/>
 <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  🚀 {SITE?.name}
+ {SITE?.name}
 </span>
